@@ -9,6 +9,7 @@
 
 #include <stdio.h>
 
+// Defining variables and values 
 int val1 = 12;
 int val2 = 16;
 int val3 = 17;
@@ -18,15 +19,18 @@ float val6 = 21.0;
 float val7 = 2.56;
 float val8 = 3.61;
 
+// Defining variables for solutions 
 int add1, sub1;
 float div, mult;
 
 int main() {
+    // Calculating the solutions 
     add1 = val1 + val2;
     sub1 = val3 - val4;
     div = val5 / val6;
     mult = val7 * val8;
 
+    // Printing out the solutions
     printf("The sum of %d and %d is %d\n", val1, val2, add1);
     printf("The difference of %d and %d is %d\n", val3, val4, sub1);
     printf("The division of %f and %f is %f\n", val5, val6, div);
