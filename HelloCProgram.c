@@ -10,8 +10,7 @@
 #include <stdio.h>
 
 /* main function */
-int main(void)
-{
+int main(void){
 printf("Hello C Program!\n");
 return 0;
 }
