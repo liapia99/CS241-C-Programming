@@ -23,7 +23,7 @@ int main(void){
     scanf ("%d", &a);
     printf ("Please enter the value for integer b: "); 
     scanf ("%d", &b);
-    printf ("Please enter the value for integer C: "); 
+    printf ("Please enter the value for integer c: "); 
     scanf ("%d", &c);
     printf ("Please enter the value for integer d: "); 
     scanf ("%d", &d);
