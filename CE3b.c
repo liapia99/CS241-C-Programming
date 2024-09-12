@@ -1,8 +1,18 @@
-/* Arithmetic.c: arithmetic expresions */
+/* Program: CE3b.c 
+    Purpose: This program is to practice arithmetic expressions. 
+    Author: Julia Piascik
+    Course: CS 241-B C Programming Concepts 
+    Term: Fall 2024 
+    Date: 09/12/2024 
+*/ 
 /* */
+
 #include <stdio.h>
+
 /* main function */
+
 int main(void){
+    
 /* variable définitions */
     int a, b, c, d, n;
     double p, q, r, x;
@@ -30,6 +40,9 @@ int main(void){
     printf ("The value for the remainder I is %f.\n", r);
     
 /* exit */ 
+    
     return 0;
-} /* end of main */
+    
+} 
+/* end of main */
 /* EOF */
