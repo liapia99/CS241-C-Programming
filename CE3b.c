@@ -26,7 +26,7 @@ int main(void) {
     printf("Please enter the value for integer b: ");
     scanf("%d", &b);
     
-    printf("Please enter the value for integer c: ");  /* Use lowercase 'c' */
+    printf("Please enter the value for integer c: "); 
     scanf("%d", &c);
     
     printf("Please enter the value for integer d: ");
@@ -38,12 +38,12 @@ int main(void) {
     /* Computation section */
     p = 2.0 * x * x - 3.0 * x + 5.0;
     q = ((double) (a + b)) / ((double) (c + d));
-    r = (1 << n) % 7;  /* Bitwise left shift and modulo */
+    r = (1 << n) % 7; 
 
     /* Output section */
     printf("The value for the polynomial p is %f.\n", p);
     printf("The value for the quotient q is %f.\n", q);
-    printf("The value for the remainder r is %d.\n", r);  /* Print remainder as int */
+    printf("The value for the remainder r is %d.\n", r);  
 
     /* Exit */
     return 0;
