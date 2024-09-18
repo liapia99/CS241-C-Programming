@@ -1,7 +1,7 @@
 // This program is designed to compute the area and perimeter of a rectangle with a height 7 and a width of 5 inches
 // The following code is written and compiled with CLion
 //
-// Program: Piascik_HW3a.c
+// Program: Piascik_HW3p1.c
 // Purpose: To compute the area and perimeter of a rectangle with a height 7 and a width of 5 inches
 
 // Author: Julia Piascik
