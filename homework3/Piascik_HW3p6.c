@@ -1,7 +1,7 @@
 // This program is designed to compute the product of two user given integers. 
 // The following code is written and compiled with CLion
 //
-// Program: problem6.c
+// Program: Piascik_HW3p6.c
 // Purpose: To compute the product of two user given integers. 
 
 // Author: Julia Piascik
