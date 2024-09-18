@@ -1,7 +1,7 @@
 // This program is designed to compute the area and perimeter of a circle with a given radius
 // The following code is written and compiled with CLion
 //
-// Program: Piascik_HW3b.c
+// Program: Piascik_HW3p2.c
 // Purpose: To compute the area and perimeter of a circle with a given radius
 
 // Author: Julia Piascik
