@@ -1,7 +1,7 @@
 // This program is designed to compute the sum of two user given integers. 
 // The following code is written and compiled with CLion
 //
-// Program: Piascik_HW3e.c
+// Program: Piascik_HW3p5.c
 // Purpose: To compute the sum of two user given integers. 
 
 // Author: Julia Piascik
