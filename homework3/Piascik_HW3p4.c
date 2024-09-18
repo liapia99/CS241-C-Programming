@@ -1,7 +1,7 @@
 // This program is designed to convert days into years, weeks, and days. 
 // The following code is written and compiled with CLion
 //
-// Program: Piascik_HW3d.c
+// Program: Piascik_HW3p4.c
 // Purpose: To convert days into years, weeks, and days. 
 
 // Author: Julia Piascik
