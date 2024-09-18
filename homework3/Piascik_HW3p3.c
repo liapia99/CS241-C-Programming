@@ -1,6 +1,6 @@
 // The purpose of this code is to make a program that displays multiple variables.
 // The following code is written and compiled with CLion
-// Program: Piascik_HW3c.c
+// Program: Piascik_HW3p3.c
 // Purpose: The purpose of this program is to use multiple variables to do multiple calculations.
 
 // Author: Julia Piascik
