@@ -2,7 +2,7 @@
 // The following code is written and compiled with CLion
 //
 // Program: Piascik_creditcard.c
-// Purpose: To compute paying off Credit Card Debt and print the interest paid and the remaining balance at the end of each monthly cycle
+// Purpose: To compute paying off Credit Card Debt and prints the interest paid and the remaining balance at the end of each monthly cycle
 
 // Author: Julia Piascik
 // Course: CS-241 C-Programming
@@ -12,11 +12,9 @@
 #include <stdio.h>
 
 int credit_lim, i;
-float balance, apr, mon_rate, interest, new_balance, mon_pay;
+float balance, apr, mon_rate, interest, new_balance, mon_pay, interest_counter, og_balance;
 
 int main() {
-  //Ask user for input values
-  
     printf("Enter the credit limit:\n");
     scanf("%d", &credit_lim);
     
@@ -29,41 +27,48 @@ int main() {
     printf("Enter the monthly payment:\n");
     scanf("%f", &mon_pay);
     
-    mon_rate = (apr / 12)/100;
+    // Calculate monthly interest rate
+    mon_rate = (apr / 12) / 100;
+    og_balance = balance;
     
     printf("\nMonth       Balance        Interest       Payment     New Balance\n");
     printf("---------------------------------------------------------------\n");
 
-  // For loop to get all 12 months 
-    for (i = 1; i =< 12; i++) {
+    // Initialize variables
+    interest_counter = 0;
+    i = 1;
+    new_balance = balance;  // Initialize new_balance as the initial balance
 
-      // Calculate interest and the new balance 
-      
+    // Loop until the debt is paid off
+    while (new_balance > 0) {
+        // Calculate interest for this month
         interest = balance * mon_rate;
-        new_balance = (balance - mon_pay) + interest;
-
-      // If in the first month, the balance should be equal to what the user inputs
-      
-        if ( i != 1){
-            balance = new_balance; 
-            interest = new_balance * mon_rate;
-            new_balance = (balance - mon_pay) + interest;
-        }
-      
-       // If the balance is less than or equal to the monthly payment, the new monthly payment should be the interest and balance
-        if (balance <= mon_pay){
-            mon_pay = interest + balance;
-        }
-
-       // If the monthly payment is equal to the interest and balance, the user should pay just the this value and nothing more
-        if (mon_pay == (interest + balance)){
-            new_balance = ((interest + balance) - mon_pay);
-        }
         
+        // Add interest to the total interest counter
+        interest_counter += interest;
+        
+        // Calculate new balance after payment
+        new_balance = balance - mon_pay + interest;
+        
+        // If balance is less than the payment, adjust the final payment to pay off remaining debt
+        if (new_balance < 0) {
+            mon_pay = balance + interest;  // Pay off remaining balance + interest
+            new_balance = 0;  // Set new balance to 0 since debt is paid off
+        }
+
+        // Print the current month's details
         printf("%-10d $%-12.2f $%-12.2f $%-12.2f $%-12.2f\n", i, balance, interest, mon_pay, new_balance);
-        
-}
-  
+
+        // Update balance for the next month
+        balance = new_balance;
+
+        // Increment month counter
+        i++;
+    }
+    interest_counter = interest_counter + og_balance;
+    
+    // Print the total interest paid and number of months
+    printf("\nTotal interest paid: $%.2f over %d months.\n", interest_counter, i - 1);
 
     return 0;
 }
