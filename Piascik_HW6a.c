@@ -24,10 +24,10 @@ int main (void){
     STUDENT stuAry[NUM_STU] = 
     {
         {"Piascik, Julia", {85, 94, 79}, 93},
-        {"Piascik, Julia", {75, 93, 89}, 83},
-        {"Piascik, Julia", {65, 92, 99}, 73},
-        {"Piascik, Julia", {55, 91, 69}, 63},
-        {"Piascik, Julia", {45, 90, 59}, 53},
+        {"Dye, John", {75, 93, 89}, 83},
+        {"Foster, Ryan", {65, 92, 99}, 73},
+        {"Heger, Campbell", {55, 91, 69}, 63},
+        {"Kates, Declan", {45, 90, 59}, 53},
     };
     
     printf("Unsorted data:\n");
@@ -58,27 +58,26 @@ int main (void){
 
 
 
-void insertionSort (STUDENT list[], int last){
+void insertionSort (STUDENT list[], int last) {
     bool located;
     STUDENT temp;
     STUDENT* pCurrent;
     STUDENT* pWalker;
     STUDENT* pLast;
-    
-    for (pCurrent = list + 1, pLast = list + last; pCurrent <= pLast; pCurrent++){
+
+    for (pCurrent = list + 1, pLast = list + last; pCurrent <= pLast; pCurrent++) {
         located = false;
         temp = *pCurrent;
-        
-        for (pWalker = pCurrent - 1;
-        pWalker >= list && !located;)
-        
-        if (strcmp(temp.name, pWalker->name) < 0){
-            *(pWalker + 1 ) = *pWalker;
-            pWalker--;
+
+        for (pWalker = pCurrent - 1; pWalker >= list && !located;) {
+            if (strcmp(temp.name, pWalker->name) < 0) {
+                *(pWalker + 1) = *pWalker;
+                pWalker--;
+            } else {
+                located = true;
+            }
         }
-        else
-        located = true;
         *(pWalker + 1) = temp;
     }
-    return;
+
 }
